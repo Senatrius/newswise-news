@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header';
+import { Navigation } from '@/components/Navigation';
 import { NewsBar } from '@/components/NewsBar';
 import './globals.css';
 
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <NewsBar />
         <Header />
+        <Navigation />
         {children}
       </body>
     </html>
