@@ -1,3 +1,4 @@
+import { Header } from '@/components/Header';
 import { NewsBar } from '@/components/NewsBar';
 import './globals.css';
 
@@ -15,6 +16,7 @@ export default function RootLayout({
       <head />
       <body>
         <NewsBar />
+        <Header />
         {children}
       </body>
     </html>
