@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+'use client';
+
 import React from 'react';
 import { DesktopLinks, MobileLinks, TabletLinks } from './NavLinks';
 
