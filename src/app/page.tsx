@@ -1,3 +1,9 @@
+import { TopStories } from '@/components/TopStories';
+
 export default function Home() {
-  return <main></main>;
+  return (
+    <main>
+      <TopStories />
+    </main>
+  );
 }
