@@ -1,6 +1,7 @@
 .react-calendar {
   max-height: 15rem;
   width: 100%;
+  max-width: 31.25rem;
   font-family: inherit;
   line-height: 100%;
   pointer-events: none;
