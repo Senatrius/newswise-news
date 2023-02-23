@@ -1,5 +1,7 @@
 import { CalendarSection } from '@/components/Calendar';
 import { Category } from '@/components/Category';
+import { Poll } from '@/components/Poll';
+import { SideAd } from '@/components/SideAd';
 import { TopStories } from '@/components/TopStories';
 
 export default function Home() {
@@ -16,8 +18,10 @@ export default function Home() {
           <Category category='Science' />
           <Category category='Health' />
         </section>
-        <section className='col-span-12 md:col-span-4'>
+        <section className='col-span-12 flex flex-col gap-8 md:col-span-4'>
           <CalendarSection />
+          <Poll />
+          <SideAd />
         </section>
       </div>
     </main>
