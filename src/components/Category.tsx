@@ -20,7 +20,9 @@ export const Category = ({ category }: { category: string }) => {
           <div className='flex gap-4'>
             <picture className='block aspect-square w-full max-w-[5rem] grow bg-navBg'></picture>
             <div className='grow'>
-              <h3 className='mb-1.5 text-card font-bold'>Placeholder title</h3>
+              <h3 className='mb-1.5 text-nav font-bold line-clamp-1'>
+                Placeholder title
+              </h3>
               <p className='line-clamp-2'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
                 architecto? Placeholder description.
@@ -30,7 +32,9 @@ export const Category = ({ category }: { category: string }) => {
           <div className='flex gap-4'>
             <picture className='block aspect-square w-full max-w-[5rem] grow bg-navBg'></picture>
             <div className='grow'>
-              <h3 className='mb-1.5 text-card font-bold'>Placeholder title</h3>
+              <h3 className='mb-1.5 text-nav font-bold line-clamp-1'>
+                Placeholder title
+              </h3>
               <p className='line-clamp-2'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
                 architecto? Placeholder description.
@@ -40,7 +44,9 @@ export const Category = ({ category }: { category: string }) => {
           <div className='flex gap-4'>
             <picture className='block aspect-square w-full max-w-[5rem] grow bg-navBg'></picture>
             <div className='grow'>
-              <h3 className='mb-1.5 text-card font-bold'>Placeholder title</h3>
+              <h3 className='mb-1.5 text-nav font-bold line-clamp-1'>
+                Placeholder title
+              </h3>
               <p className='line-clamp-2'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
                 architecto? Placeholder description.
