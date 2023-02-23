@@ -4,8 +4,7 @@ import { SectionHeading } from './SectionHeading';
 export const Social = () => {
   return (
     <section>
-      <SectionHeading heading='Follow Us' />
-      <ul className='flex items-center gap-4'>
+      <ul className='flex items-center gap-2 sm:gap-4'>
         <li>
           <a
             className='text-navBg hover:text-primary focus:text-primary'

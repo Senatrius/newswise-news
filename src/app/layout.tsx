@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header';
 import { Navigation } from '@/components/Navigation';
 import { NewsBar } from '@/components/NewsBar';
+import { Social } from '@/components/Social';
 import './globals.css';
 
 export default function RootLayout({
@@ -20,6 +21,12 @@ export default function RootLayout({
         <Header />
         <Navigation />
         {children}
+        <footer className='bg-navBg py-3'>
+          <div className='wrapper flex items-center justify-between text-small text-white'>
+            <p>All rights reserved</p>
+            <Social />
+          </div>
+        </footer>
       </body>
     </html>
   );
