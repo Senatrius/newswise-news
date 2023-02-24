@@ -34,7 +34,12 @@ export const NewsBar = () => {
   return (
     <div className='bg-navBg py-3 text-small text-white'>
       <div className='wrapper flex items-center justify-between'>
-        <p>Latest news placeholder here...</p>
+        <p
+          title='Potential consequences of a successful challenge to medication abortion.'
+          className='line-clamp-1'>
+          Potential consequences of a successful challenge to medication
+          abortion.
+        </p>
         <div className='flex items-center'>
           <div className='mx-4 -my-3 hidden min-h-full w-[1px] self-stretch bg-divider sm:inline-block'></div>
           <p className='hidden sm:inline-block '>{`${date.getFullYear()}, ${
