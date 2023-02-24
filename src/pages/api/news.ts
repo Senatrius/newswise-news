@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface IArticle {
   title: string;
+  slug: string;
   body: string;
   imageUrl: string;
   category: string;
