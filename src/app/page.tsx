@@ -4,6 +4,7 @@ import { Poll } from '@/components/Poll';
 import { SideAd } from '@/components/SideAd';
 import { TopStories } from '@/components/TopStories';
 import data from '@/articles.json';
+import { sortArticlesByCategory } from '@/helpers';
 
 export interface IArticle {
   title: string;
@@ -17,16 +18,6 @@ export interface IArticle {
 export interface IArticles {
   [key: string]: IArticle[];
 }
-
-const sortArticlesByCategory = (data: IArticle[]) => {
-  return data.reduce(function (obj: IArticles, article: IArticle) {
-    if (!obj[article.category]) {
-      obj[article.category] = [];
-    }
-    obj[article.category].push(article);
-    return obj;
-  }, {});
-};
 
 export default function Home() {
   const sortedData = sortArticlesByCategory(data);
