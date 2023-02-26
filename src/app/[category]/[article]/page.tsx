@@ -22,7 +22,7 @@ export default async function Category({
   );
 
   return (
-    <article className='wrapper my-8 !max-w-[100ch]'>
+    <main className='wrapper my-8 !max-w-[100ch]'>
       <picture className='relative mb-8 block aspect-[12/6] h-auto w-full bg-navBg'>
         <Image
           className='object-cover'
@@ -32,8 +32,12 @@ export default async function Category({
           sizes='1280px'
         />
       </picture>
-      <h1 className='mb-8 text-article font-bold'>{articleData[0].title}</h1>
-      <p className='whitespace-pre-wrap leading-snug'>{articleData[0].body}</p>
-    </article>
+      <article>
+        <h1 className='mb-8 text-article font-bold'>{articleData[0].title}</h1>
+        <p className='whitespace-pre-wrap leading-snug'>
+          {articleData[0].body}
+        </p>
+      </article>
+    </main>
   );
 }

@@ -15,23 +15,27 @@ const categories = [
 export const DesktopLinks = () => {
   return (
     <ul className='hidden md:flex'>
-      <Link
-        className='flex aspect-square min-h-[3.125rem] items-center justify-center bg-primary hover:brightness-150 focus:brightness-150'
-        href='/'>
-        <Image
-          src='/home.svg'
-          alt=''
-          width={27}
-          height={24}
-        />
-      </Link>
-      {categories.map(category => (
+      <li>
         <Link
-          className='inline-block border-r border-divider py-4 px-4 text-center text-nav capitalize hover:bg-primary focus:bg-primary lg:px-6'
-          key={category}
-          href={category}>
-          {category}
+          className='flex aspect-square min-h-[3.125rem] items-center justify-center bg-primary hover:brightness-150 focus:brightness-150'
+          href='/'>
+          <span className='sr-only'>Home</span>
+          <Image
+            src='/home.svg'
+            alt=''
+            width={27}
+            height={24}
+          />
         </Link>
+      </li>
+      {categories.map(category => (
+        <li key={category}>
+          <Link
+            className='inline-block border-r border-divider py-4 px-4 text-center text-nav capitalize hover:bg-primary focus:bg-primary lg:px-6'
+            href={category}>
+            {category}
+          </Link>
+        </li>
       ))}
     </ul>
   );
@@ -45,6 +49,7 @@ export const MobileLinks = () => {
       <Link
         className='flex aspect-square min-h-[3.125rem] items-center justify-center bg-primary hover:brightness-150 focus:brightness-150'
         href='/'>
+        <span className='sr-only'>Home</span>
         <Image
           src='/home.svg'
           alt=''
@@ -66,13 +71,14 @@ export const MobileLinks = () => {
       {showMobileMenu && (
         <ul className='absolute top-[3.25rem] z-20 w-full bg-navBg'>
           {categories.map(category => (
-            <Link
-              onClick={() => setShowMobileMenu(false)}
-              className='inline-block w-full border-b border-divider py-4 px-6 text-center text-nav capitalize hover:bg-primary focus:bg-primary'
-              key={category}
-              href={`/${category}`}>
-              {category}
-            </Link>
+            <li key={category}>
+              <Link
+                onClick={() => setShowMobileMenu(false)}
+                className='inline-block w-full border-b border-divider py-4 px-6 text-center text-nav capitalize hover:bg-primary focus:bg-primary'
+                href={`/${category}`}>
+                {category}
+              </Link>
+            </li>
           ))}
         </ul>
       )}
