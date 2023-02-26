@@ -23,7 +23,7 @@ export default function RootLayout({
         {children}
         <footer className='!mt-auto mb-0 bg-navBg py-3'>
           <div className='wrapper flex items-center justify-between text-small text-white'>
-            <p>All rights reserved</p>
+            <p>2023, All rights reserved</p>
             <Social />
           </div>
         </footer>

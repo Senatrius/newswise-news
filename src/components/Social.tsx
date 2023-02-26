@@ -7,7 +7,7 @@ export const Social = () => {
       <ul className='flex items-center gap-2 sm:gap-4'>
         <li>
           <a
-            className='text-navBg hover:text-primary focus:text-primary'
+            className='text-white hover:text-primary focus:text-primary'
             href='#'>
             <span className='sr-only'>Facebook</span>
             <svg
@@ -25,7 +25,7 @@ export const Social = () => {
         </li>
         <li>
           <a
-            className='text-navBg hover:text-primary focus:text-primary'
+            className='text-white hover:text-primary focus:text-primary'
             href='#'>
             <span className='sr-only'>Twitter</span>
             <svg
@@ -43,7 +43,7 @@ export const Social = () => {
         </li>
         <li>
           <a
-            className='text-navBg hover:text-primary focus:text-primary'
+            className='text-white hover:text-primary focus:text-primary'
             href='#'>
             <span className='sr-only'>Instagram</span>
             <svg
@@ -61,7 +61,7 @@ export const Social = () => {
         </li>
         <li>
           <a
-            className='text-navBg hover:text-primary focus:text-primary'
+            className='text-white hover:text-primary focus:text-primary'
             href='#'>
             <span className='sr-only'>Linked in</span>
             <svg
@@ -79,7 +79,7 @@ export const Social = () => {
         </li>
         <li>
           <a
-            className='text-navBg hover:text-primary focus:text-primary'
+            className='text-white hover:text-primary focus:text-primary'
             href='#'>
             <span className='sr-only'>Medium</span>
             <svg
