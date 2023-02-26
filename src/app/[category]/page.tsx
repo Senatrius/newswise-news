@@ -21,7 +21,7 @@ export default async function Category({
 
   return (
     <main className='wrapper grid-rows-auto my-8 grid grid-cols-1 gap-8 lg:grid-cols-2'>
-      {categoryData.map((card: IArticle, idx: any) => (
+      {categoryData?.map((card: IArticle, idx: any) => (
         <ArticleCard
           key={idx}
           title={card.title}

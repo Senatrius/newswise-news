@@ -64,13 +64,13 @@ export const MobileLinks = () => {
         />
       </button>
       {showMobileMenu && (
-        <ul className='z-20 absolute top-[3.25rem] w-full bg-navBg'>
+        <ul className='absolute top-[3.25rem] z-20 w-full bg-navBg'>
           {categories.map(category => (
             <Link
               onClick={() => setShowMobileMenu(false)}
               className='inline-block w-full border-b border-divider py-4 px-6 text-center text-nav capitalize hover:bg-primary focus:bg-primary'
               key={category}
-              href={category}>
+              href={`/${category}`}>
               {category}
             </Link>
           ))}
