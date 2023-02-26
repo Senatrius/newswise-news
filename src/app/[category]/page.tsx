@@ -1,13 +1,14 @@
 import { ArticleCard } from '@/components/ArticleCard';
 import { IArticle } from '@/app/page';
 import data from '@/articles.json';
+import { sortArticlesByCategory } from '@/helpers';
 
 export default async function Category({
   params
 }: {
   params: { [key: string]: string };
 }) {
-  const categoryData = data[params.category];
+  const categoryData = sortArticlesByCategory(data)[params.category];
 
   return (
     <main className='wrapper grid-rows-auto my-8 grid grid-cols-1 gap-8 lg:grid-cols-2'>

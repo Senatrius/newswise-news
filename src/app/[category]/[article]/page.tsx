@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import { IArticle } from '@/app/page';
 import data from '@/articles.json';
+import { sortArticlesByCategory } from '@/helpers';
 
 export default async function Category({
   params
 }: {
   params: { [key: string]: string };
 }) {
-  const articleData = data[params.category].filter(
+  const articleData = sortArticlesByCategory(data)[params.category].filter(
     (article: IArticle) => article.slug === params.article
   );
 
