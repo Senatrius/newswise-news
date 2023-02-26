@@ -16,12 +16,12 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className='flex flex-col'>
         <NewsBar />
         <Header />
         <Navigation />
         {children}
-        <footer className='bg-navBg py-3'>
+        <footer className='!mt-auto mb-0 bg-navBg py-3'>
           <div className='wrapper flex items-center justify-between text-small text-white'>
             <p>All rights reserved</p>
             <Social />

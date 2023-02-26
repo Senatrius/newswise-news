@@ -23,7 +23,7 @@ export default async function Category({
 
   return (
     <article className='wrapper my-8 !max-w-[100ch]'>
-      <picture className='relative mb-8 block aspect-[12/6] h-full w-full bg-navBg'>
+      <picture className='relative mb-8 block aspect-[12/6] h-auto w-full bg-navBg'>
         <Image
           className='object-cover'
           src={articleData[0].imageUrl}
