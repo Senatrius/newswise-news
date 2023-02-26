@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { IArticles } from '@/pages/api/news';
+import { IArticles } from '@/app/page';
 import { SectionHeading } from './SectionHeading';
 
 export const TopStories = ({ data }: { data: IArticles }) => {

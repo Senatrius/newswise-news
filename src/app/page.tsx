@@ -3,32 +3,45 @@ import { Category } from '@/components/Category';
 import { Poll } from '@/components/Poll';
 import { SideAd } from '@/components/SideAd';
 import { TopStories } from '@/components/TopStories';
-import { IArticle } from '@/pages/api/news';
+import data from '@/articles.json';
 
-async function getData() {
-  const res = await fetch('http://localhost:3000/api/news');
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
+export interface IArticle {
+  title: string;
+  slug: string;
+  body: string;
+  imageUrl: string;
+  category: string;
+  publishedAt: string;
 }
 
-export default async function Home() {
-  const data = await getData();
+export interface IArticles {
+  [key: string]: IArticle[];
+}
+
+const sortArticlesByCategory = (data: IArticle[]) => {
+  return data.reduce(function (obj: IArticles, article: IArticle) {
+    if (!obj[article.category]) {
+      obj[article.category] = [];
+    }
+    obj[article.category].push(article);
+    return obj;
+  }, {});
+};
+
+export default function Home() {
+  const sortedData = sortArticlesByCategory(data);
 
   return (
     <main>
       <h1 className='sr-only'>News Section</h1>
-      <TopStories data={data} />
+      <TopStories data={sortedData} />
       <div className='wrapper my-8 grid grid-cols-12'>
         <section className='col-span-12 mb-8 flex flex-col gap-8 md:col-span-8 md:mb-0 md:mr-8'>
-          {Object.entries(data).map((entry, idx) => (
+          {Object.entries(sortedData).map((entry, idx) => (
             <Category
               key={idx}
               category={entry[0]}
-              data={entry[1] as IArticle[]}
+              data={entry[1]}
             />
           ))}
         </section>

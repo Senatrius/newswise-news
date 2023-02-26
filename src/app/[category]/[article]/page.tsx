@@ -1,22 +1,12 @@
 import Image from 'next/image';
-import { IArticle } from '@/pages/api/news';
-
-async function getData() {
-  const res = await fetch('http://localhost:3000/api/news');
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
+import { IArticle } from '@/app/page';
+import data from '@/articles.json';
 
 export default async function Category({
   params
 }: {
   params: { [key: string]: string };
 }) {
-  const data = await getData();
   const articleData = data[params.category].filter(
     (article: IArticle) => article.slug === params.article
   );

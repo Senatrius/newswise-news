@@ -1,4 +1,4 @@
-import { IArticle } from '@/pages/api/news';
+import { IArticle } from '@/app/page';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -15,7 +15,9 @@ export const Category = ({
     <section>
       <SectionHeading heading={category} />
       <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-2'>
-        <Link href={`/${category}/${data[0].slug}`} className='col-span-1 group'>
+        <Link
+          href={`/${category}/${data[0].slug}`}
+          className='group col-span-1'>
           <picture className='relative mb-4 block aspect-[3/2] max-h-[12rem] w-full bg-navBg'>
             <Image
               className='object-cover'
@@ -27,7 +29,7 @@ export const Category = ({
           </picture>
           <h3
             title={data[0].title}
-            className='group-hover:text-primary group-focus:text-primary text-card font-bold line-clamp-3'>
+            className='text-card font-bold line-clamp-3 group-hover:text-primary group-focus:text-primary'>
             {data[0].title}
           </h3>
         </Link>
@@ -36,20 +38,20 @@ export const Category = ({
             <Link
               href={`/${category}/${article.slug}`}
               key={idx}
-              className='flex gap-4 group'>
+              className='group flex gap-4'>
               <picture className='relative block aspect-square w-full max-w-[5rem] grow bg-navBg'>
                 <Image
                   src={article.imageUrl}
                   alt=''
                   fill
                   className='object-cover'
-                  sizes="120px"
+                  sizes='120px'
                 />
               </picture>
               <div className='grow'>
                 <h3
                   title={article.title}
-                  className='group-hover:text-primary group-focus:text-primary mb-1.5 text-nav font-bold line-clamp-3'>
+                  className='mb-1.5 text-nav font-bold line-clamp-3 group-hover:text-primary group-focus:text-primary'>
                   {article.title}
                 </h3>
               </div>
