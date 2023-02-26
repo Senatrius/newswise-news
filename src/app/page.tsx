@@ -20,6 +20,7 @@ export default async function Home() {
 
   return (
     <main>
+      <h1 className='sr-only'>News Section</h1>
       <TopStories data={data} />
       <div className='wrapper my-8 grid grid-cols-12'>
         <section className='col-span-12 mb-8 flex flex-col gap-8 md:col-span-8 md:mb-0 md:mr-8'>

@@ -21,6 +21,9 @@ export default async function Category({
 
   return (
     <main className='wrapper grid-rows-auto my-8 grid grid-cols-1 gap-8 lg:grid-cols-2'>
+      <h1 className='col-span-full text-article font-bold capitalize'>
+        {params.category}
+      </h1>
       {categoryData?.map((card: IArticle, idx: any) => (
         <ArticleCard
           key={idx}
