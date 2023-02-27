@@ -3,12 +3,13 @@ import { IArticle } from '@/app/page';
 import data from '@/articles.json';
 import { sortArticlesByCategory } from '@/helpers';
 
-export default async function Category({
+export default function Category({
   params
 }: {
   params: { [key: string]: string };
 }) {
-  const articleData = sortArticlesByCategory(data)[params.category].filter(
+  const sortedData = sortArticlesByCategory(data);
+  const articleData = sortedData[params.category].filter(
     (article: IArticle) => article.slug === params.article
   );
 
